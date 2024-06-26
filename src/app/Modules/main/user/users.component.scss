@@ -1,0 +1,59 @@
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+.user_list {
+    padding: 20px 20px 0px 20px;
+    margin-bottom: 0px;
+}
+.search_div{
+    padding:0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button{
+        padding: 8px;
+        width: 90px;
+    }
+}
+.user-list-container {
+    padding: 20px;
+  }
+  
+  .table-responsive-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  mat-form-field.full-width {
+    width: 100%;
+  }
+  
+  button[mat-fab] {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .table-responsive-container {
+      overflow-x: auto;
+      display: block;
+    }
+  
+    table {
+      width: 100%;
+      min-width: 600px; 
+      table-layout: auto;
+    }
+  
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+  }
+  

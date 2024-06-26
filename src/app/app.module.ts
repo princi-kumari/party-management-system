@@ -20,5 +20,6 @@ import { MaterialExampleModule } from './material/material.module';
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

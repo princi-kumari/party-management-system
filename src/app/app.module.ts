@@ -7,16 +7,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ConfirmModalComponent } from './modals/confirm-modal/confirm-modal.component';
 import { MaterialExampleModule } from './material/material.module';
+import { HttpClientModule } from '@angular/common/http';
+import { DynamicFormBuilderModule } from './Modules/dynamic-form-builder/dynamic-form-builder.module';
 @NgModule({
   declarations: [
     AppComponent,
-    ConfirmModalComponent
+    ConfirmModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialExampleModule
+    MaterialExampleModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

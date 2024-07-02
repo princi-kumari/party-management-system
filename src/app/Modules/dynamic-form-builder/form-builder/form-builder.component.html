@@ -1,0 +1,69 @@
+<!-- src/app/form-builder/form-builder.component.html -->
+<div class="outer_div">
+  <div class="form_builder">
+    
+<!-- src/app/form-builder/form-builder.component.html -->
+
+<div>
+  <h3>Add Field</h3>
+  <form #fieldForm="ngForm">
+    <mat-form-field class="full-width">
+      <mat-label>Field Type</mat-label>
+      <mat-select [(ngModel)]="newField.type" name="type" required>
+        <mat-option value="text">Text</mat-option>
+        <mat-option value="textarea">Textarea</mat-option>
+        <mat-option value="select">Select</mat-option>
+        <mat-option value="checkbox">Checkbox</mat-option>
+        <mat-option value="radio">Radio</mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Label" [(ngModel)]="newField.label" name="label" required>
+      <mat-error *ngIf="fieldForm.controls['label']?.invalid && (fieldForm.controls['label'].dirty || fieldForm.controls['label'].touched)">
+        Label is required
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Placeholder" [(ngModel)]="newField.placeholder" name="placeholder" required>
+      <mat-error *ngIf="fieldForm.controls['placeholder']?.invalid && (fieldForm.controls['placeholder'].dirty || fieldForm.controls['placeholder'].touched)">
+        Placeholder is required
+      </mat-error>
+    </mat-form-field>
+    
+    <!-- Radio Options -->
+    <div *ngIf="newField.type === 'radio'">
+      <div *ngFor="let option of newField.options; let i = index">
+        <mat-radio-group [(ngModel)]="newField.value" name="radioOption">
+          <mat-radio-button [value]="option.value">{{ option.label }}</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+    
+    <button mat-raised-button color="primary" [disabled]="fieldForm.invalid" class="add_field" (click)="addField(newField)">Add Field</button>
+  </form>
+</div>
+
+
+
+
+    <div>
+      <form [formGroup]="form" (ngSubmit)="submitForm()">
+        <!-- Render existing fields -->
+        <ng-container formArrayName="fields">
+          <div *ngFor="let field of fields; let i = index" class="field-container">
+              <label class="label">{{ field.label }}</label>
+
+            <app-form-field [field]="field" [form]="getFormGroupAtIndex(i)"></app-form-field>
+            <button style="width: auto;padding: 0%;" mat-icon-button color="warn" type="button" (click)="removeField(i)">
+              <mat-icon class="label">delete</mat-icon>
+            </button>
+          </div>
+        </ng-container>
+        <button mat-raised-button color="primary" type="submit" class="submit_btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,42 @@
+.outer_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .form_builder {
+        width: 900px;
+        min-height: 500px;
+        max-height: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 20px;
+        text-align: center;
+        border-radius: 16px;
+
+        .field-container {
+            margin-top: 20px;
+            text-align: left;
+            padding: 0px 60px;
+        }
+
+        .submit_btn {
+            margin-top: 20px;
+        }
+
+
+        button {
+            width: 120px;
+            padding: 8px;
+        }
+
+        .add_field {
+            margin-left: 20px;
+
+        }
+
+        .error {
+            color: red;
+            margin-top: 5px;
+            font-size: 0.875em;
+        }
+    }
+}

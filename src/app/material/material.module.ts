@@ -6,7 +6,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';  // Ensure this is imported
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   exports: [
     MatTableModule,
@@ -18,6 +21,12 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatFormFieldModule,
     MatIconModule,
     MatDialogModule ,
+    MatInputModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatRadioModule,  // Ensure this is imported
+    MatButtonModule,
+    MatFormFieldModule
    
     
   ]

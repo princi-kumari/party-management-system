@@ -5,10 +5,10 @@ import { DynamicFormBuilderModule } from './Modules/dynamic-form-builder/dynamic
 import { API_ROUTES } from './utils/routes';
 
 const routes: Routes = [
-  // {
-  //   path:'',
-  //   loadChildren:()=>import('./Modules/main/main.module').then((m)=>MainModule)
-  // },
+  {
+    path:API_ROUTES.main,
+    loadChildren:()=>import('./Modules/main/main.module').then((m)=>MainModule)
+  },
   {
     path:'',
     loadChildren:()=>import('./Modules/dynamic-form-builder/dynamic-form-builder.module').then((m)=>DynamicFormBuilderModule)  }

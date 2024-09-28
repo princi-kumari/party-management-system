@@ -29,8 +29,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## code branch
 master
 
-<!-- for task 1 -->
-http://localhost:4200/main
-
-<!-- for task 2 -->
-http://localhost:4200

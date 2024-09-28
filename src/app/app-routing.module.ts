@@ -6,12 +6,13 @@ import { API_ROUTES } from './utils/routes';
 
 const routes: Routes = [
   {
-    path:API_ROUTES.main,
+    path:'',
     loadChildren:()=>import('./Modules/main/main.module').then((m)=>MainModule)
   },
-  {
-    path:'',
-    loadChildren:()=>import('./Modules/dynamic-form-builder/dynamic-form-builder.module').then((m)=>DynamicFormBuilderModule)  }
+  // {
+  //   path:'',
+  //   loadChildren:()=>import('./Modules/dynamic-form-builder/dynamic-form-builder.module').then((m)=>DynamicFormBuilderModule)
+  //   }
 ];
 
 @NgModule({
